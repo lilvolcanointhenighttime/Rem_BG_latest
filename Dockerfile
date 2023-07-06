@@ -3,6 +3,8 @@ FROM python:3.8
 WORKDIR /app
 
 COPY ./requirements.txt /app
+RUN python3 -m venv venv
+RUN cd venv
 RUN pip3 install -r ./requirements.txt
 
 COPY . /app
